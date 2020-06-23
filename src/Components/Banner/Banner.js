@@ -1,9 +1,11 @@
 import React from 'react';
-import { StyledBanner } from './Banner.styles.js';
+import { StyledBanner, BannerWrapper } from './Banner.styles.js';
 
 export const Banner = () => {
     return (
-        <StyledBanner>Quill</StyledBanner>
+    <BannerWrapper>
+        <StyledBanner>Quill-pro-Quo</StyledBanner>
+    </BannerWrapper>
     )
 };
 

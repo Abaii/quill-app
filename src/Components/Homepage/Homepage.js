@@ -1,11 +1,13 @@
 import React from "react";
-//import { Container } from "react-bootstrap";
-//import { Navbar } from "../Navbar/Navbar.js";
+import { StyledPageBanner, StyledMainBanner } from './HomePage.styles.js';
 
 export const HomePage = () => {
   return (
     <div>
-      <p>HOMEPAGE</p>
+      <StyledMainBanner>Welcome.</StyledMainBanner>
+      <StyledPageBanner>
+        <h1>Banner placeholder.</h1>
+    </StyledPageBanner>
     </div>
   );
 };

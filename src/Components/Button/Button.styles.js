@@ -7,8 +7,8 @@ const PrimaryButtonStyles = css`
     cursor:pointer;
     height:30px;
     color:#1c2c4a;
-    background-color:#F8F8FF;
     margin:20px;
+    background-color:#DCDCDC;
 
     &:hover{
         color:#DCDCDC;
@@ -18,6 +18,8 @@ const PrimaryButtonStyles = css`
 
 export const StyledButton = styled.button`
     font-size:20px;
+    font-family: 'Courier New', Courier, monospace;
+
 
     ${({ type }) => type ==='primary' && PrimaryButtonStyles} 
 `;

@@ -4,12 +4,14 @@ import { Container, Col, Row } from 'react-bootstrap';
 import { Navbar } from './Components/Navbar/Navbar.js';
 import { HomePage } from './Components/HomePage/HomePage.js';
 import { Banner } from './Components/Banner/Banner.js';
+import { AppWrapper, TopBar } from './App.styles.js';
+
 
 function App() {
   const [ page, updatePage ] = useState('Home');
 
-  const changePage = (directTo) => {
-    updatePage(directTo)
+  const changePage = (page) => {
+    updatePage(page)
   }; 
 
   const renderPage = (page) => {
@@ -21,20 +23,23 @@ function App() {
   };
 
   return (
-    <div>
-      <Container>
+    <AppWrapper>
+      <TopBar>
+        <Container fluid>
+            <Row className='justify-content-between'>
+              <Col xs='12' lg='4'><Banner/></Col>
+              <Col xs='12' lg='5'><Navbar changePage={changePage}/></Col>
+            </Row>
+        </Container>
+      </TopBar>
+      <Container fluid>
         <Row>
-          <Col md='auto'><Banner/></Col>
-          <Col md='auto'></Col>
-          <Col md='auto'>
-            <Navbar changePage={changePage}/>
-          </Col>
+          <div>
+            {renderPage(page)}
+          </div>
         </Row>
       </Container>
-      <div>
-        {renderPage(page)}
-      </div>
-    </div>
+    </AppWrapper>
   )
 };
 
