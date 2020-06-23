@@ -1,13 +1,11 @@
 import React from "react";
-import { Container } from "react-bootstrap";
-import { Navbar } from "../Navbar/Navbar";
+//import { Container } from "react-bootstrap";
+//import { Navbar } from "../Navbar/Navbar.js";
 
-export const Homepage = () => {
+export const HomePage = () => {
   return (
-    <Container>
-      <Row>
-        <Navbar />
-      </Row>
-    </Container>
+    <div>
+      <p>HOMEPAGE</p>
+    </div>
   );
 };

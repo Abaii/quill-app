@@ -1,10 +1,10 @@
 import React from 'react';
-import { NavButton } from './Button.styles.js';
+import { StyledButton } from './Button.styles.js';
 
 export const Button = (props) => {
-    const {label,type} = props;
+    const {type,functionality,label} = props;
     return (
-        <NavButton type={type}>{label}</NavButton>
+        <StyledButton type={type} onClick={()=>functionality(label)}>{label}</StyledButton>
     )
 };
 
