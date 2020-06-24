@@ -1,16 +1,15 @@
 import React from "react";
 import { StyledNavBar } from "./Navbar.styles.js";
-import { Button } from '../Button/Button.js'
+//import { Button } from '../Button/Button.js'
+import { NavLink } from "react-router-dom";
+import './NavBar.css';
 
-export const Navbar = (props) => {
-  const { changePage } = props;
-
+export const Navbar = () => {
   return (
     <StyledNavBar>
-      <Button type={'primary'} functionality={changePage} label='Home'/>
-      <Button type={'primary'} functionality={changePage} label='Profile'/>
-      <Button type={'primary'} functionality={changePage} label='Details'/>
-      <Button type={'primary'} functionality={changePage} label='Log in'/>
+      <NavLink exact className='StyledLink' activeClassName='ActiveStyledLink' to="/">Home</NavLink>
+      <NavLink exact className='StyledLink' to="/Profile">Profile</NavLink>
+      <NavLink exact className='StyledLink' to="/Details">Details</NavLink>
     </StyledNavBar>
   )
 };
