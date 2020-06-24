@@ -18,7 +18,7 @@ function App() {
         <Container fluid>
             <Row className='justify-content-between'>
               <Col xs='12' lg='4'><Banner/></Col>
-              <Col xs='12' lg='5'><Navbar/></Col>
+              <Col xs='12' lg='7'><Navbar/></Col>
             </Row>
         </Container>
       </TopBar>
@@ -32,6 +32,12 @@ function App() {
               </Route>
               <Route path="/Profile">
                 <div>Profile page placeholder</div>
+              </Route>
+              <Route path="/Log-in">
+                <div>Log in page placeholder</div>
+              </Route>
+              <Route path="/Sign-up">
+                <div>Sign up page placeholder</div>
               </Route>
               <Route path="/">
                 <HomePage/>

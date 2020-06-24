@@ -5,5 +5,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 export const StyledNavBar = styled.div`
   display: flex;
   justify-content: space-evenly;
+  align-items:center;
 `;
 
